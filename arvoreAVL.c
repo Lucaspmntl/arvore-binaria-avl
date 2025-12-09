@@ -27,21 +27,6 @@ Node *create_node(int key) {
     return node;
 }
 
-int max(int a, int b) {
-    return (a > b) ? a : b;
-}
-
-// criação do nó (inicializa altura como 1)
-Node *create_node(int key) {
-    Node *node = (Node *)malloc(sizeof(Node));
-    node->key = key;
-    node->left = NULL;
-    node->right = NULL;
-    node->height = 1; // novo nó é sempre folha, altura 1
-    return node;
-}
-
-
 // rotação à Direita (quando o peso está na esquerda)
 Node *rightRotate(Node *y) {
     Node *x = y->left;
